@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Neucha&family=Playfair+Display:ital,wght@0,800;0,900;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Lato';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDD;
+    align-items: center;
+    height: 10vh;
+    padding: 0 30px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btn-add {
+    background-color: #4169e1;
+}
+
+.btn-add:hover {
+    background-color: #6495ed;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.header-btn {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.clear-btn {
+    width: 200px;
+    background-color: #609966;
+    margin-top: 20px;
+}
+
+.clear-btn:hover {
+    background-color: #9DC08B;
+}
+
+.clear-icon {
+    left: 40px !important;
+}
+
+.clear-btn .icon {
+    border-left: 1px solid #9DC08B;
+}
+
+.noselect {
+    background: red;
+    background: #e62222;
+}
+
+.noselect .icon {
+    border-left: 1px solid #c41b1b;
+}
+
+.link-text {
+    text-decoration: none;
+}
+
+.addbtn {
+    background: blue;
+    background: #4169e1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.addbtn .icon {
+    border-left: 1px solid #6495ed;
+}
+
+.header-btn,
+.header-btn span {
+    transition: 200ms;
+}
+
+.header-btn .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.header-btn .icon {
+    position: absolute;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+.header-btn svg {
+    width: 25px;
+    fill: #eee;
+    height: 25px;
+}
+
+.noselect:hover {
+    background: #ff3636;
+}
+
+.addbtn:hover {
+    background: #6495ed;
+}
+
+
+.header-btn:hover .text {
+    color: transparent;
+}
+
+.header-btn:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.header-btn:focus {
+    outline: none;
+}
+
+.header-btn:active .icon svg {
+    transform: scale(0.8);
+}
+
+.content {
+    padding: 20px 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.product {
+    flex-basis: 24%;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #d3d3d3;
+    position: relative;
+    height: 300px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
+}
+
+.detail-text {
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.container {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container input {
+    display: none;
+}
+
+.container svg {
+    overflow: visible;
+}
+
+.path {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+}
+
+.container input:checked~svg .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.form-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 20px;
+    width: 50%;
+}
+
+.form-input {
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom-color 0.3s, font-size 0.3s;
+    width: 450px;
+    /* margin-left: 20px; */
+}
+
+.form-input::placeholder {
+    color: #d3d3d3;
+}
+
+.form-input:focus {
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom-color 0.3s, font-size 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom-color: blue;
+    /* Change to your desired color */
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    z-index: 1;
+}
+
+.page:not(.active) {
+    opacity: 0;
+    z-index: -1;
+}
+
+.input-select {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.type-switcher-container {
+    display: block;
+}
+
+.footer {
+    border-top: 1px solid #DDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    height: 50px;
+    margin-top: min(200px, 10%);
+}
+
+.error {
+    margin-left: 15px;
+    padding: 20px;
+    margin-top: 80px;
+    width: 30%;
+    background-color: rgba(244, 67, 54, 0.9);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
